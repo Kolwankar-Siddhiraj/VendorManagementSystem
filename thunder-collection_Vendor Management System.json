@@ -1,0 +1,183 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Vendor Management System",
+    "collectionId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+    "dateExported": "2024-05-05T22:18:36.182Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "169e921b-3cd8-45c7-bbbd-141b4ae578ef",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Admin Login",
+            "url": "{{u}}/admin/login/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-03T06:55:47.492Z",
+            "modified": "2024-05-03T07:30:18.802Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"AdminVP001\",\n  \"password\": \"Pass@123\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "6f56244f-cf01-4915-8831-0040f56f70e3",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Get Vendor List",
+            "url": "{{u}}/vendors/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-05-03T07:46:38.705Z",
+            "modified": "2024-05-03T07:47:09.695Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "d2626d50-4d13-4ab7-912e-9f3c46fc5d89",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Create New Vendor",
+            "url": "{{u}}/vendors/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-05-03T07:49:08.096Z",
+            "modified": "2024-05-03T08:10:41.483Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"vendor_code\": \"PS321\",\n  \"name\": \"Patel Suppliers\",\n  \"address\": \"456, Market Road, Mumbai, Maharashtra\",\n  \"contact_details\": \"+91-7654321098\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "8a1bbc92-a752-4d1e-8162-0ba2a33ecf66",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Vendor Get, Update, Delete",
+            "url": "{{u}}/vendor/2/",
+            "method": "GET",
+            "sortNum": 62500,
+            "created": "2024-05-03T08:21:36.593Z",
+            "modified": "2024-05-05T21:17:08.892Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\": \"777, Wholesale Lane, Ahmedabad, Gujarat\",\n  \"contact_details\": \"+91-8765432109\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "0bdf87e9-7721-4bba-baa6-9ff8c78f7732",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Get Purchase Order List ",
+            "url": "{{u}}/purchase_orders/?vendor_id=2",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2024-05-04T18:30:45.016Z",
+            "modified": "2024-05-05T17:15:53.426Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "vendor_id",
+                    "value": "2",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "347d399a-ce9f-496c-8407-4ea2f87a54db",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Create New Purchase Order",
+            "url": "{{u}}/purchase_orders/",
+            "method": "POST",
+            "sortNum": 67500,
+            "created": "2024-05-04T18:33:21.296Z",
+            "modified": "2024-05-05T21:19:24.936Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"vendor\": \"2\",\n  \"delivery_date\": \"10-05-2024\",\n  \"items\": [\n    {\n      \"item_code\": \"ab001\",\n      \"name\": \"item 001\",\n      \"price\": \"100.0\"\n    }\n  ],\n  \"quantity\": \"10\"\n}\n\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "f2fe67d3-8f59-4c6e-8391-3d52712c6738",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Purchase Order Get, Update, Delete ",
+            "url": "{{u}}/purchase_order/19/",
+            "method": "PUT",
+            "sortNum": 77500,
+            "created": "2024-05-05T12:15:16.905Z",
+            "modified": "2024-05-05T21:55:10.898Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"status\": \"completed\",\n  \"quality_rating\": \"3\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "a772c541-9370-4420-86da-b95862cec14c",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Purchase Order Acknowledge",
+            "url": "{{u}}/purchase_order/13/acknowledge/",
+            "method": "POST",
+            "sortNum": 87500,
+            "created": "2024-05-05T17:10:59.904Z",
+            "modified": "2024-05-05T21:36:17.242Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        },
+        {
+            "_id": "eb112062-5211-4d31-92e0-6ed312a4b9dd",
+            "colId": "0c73cd39-e85a-49f2-af68-aad77e72cb73",
+            "containerId": "",
+            "name": "Get Vendor Performance Metrics",
+            "url": "{{u}}/vendor/2/performance/",
+            "method": "GET",
+            "sortNum": 97500,
+            "created": "2024-05-05T22:05:13.208Z",
+            "modified": "2024-05-05T22:05:40.117Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{auth}}"
+            }
+        }
+    ],
+    "ref": "QBtAmPOvXKAk3qdfUqyPWVM4yyp0fnE_eHyQ6CJrFO4-Jqx6IQ10YVgYxp6YAcZSlYZBtI3VL1FT6taLSiB7Yg"
+}

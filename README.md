@@ -4,15 +4,15 @@ Vendor Management System
 
 # Steps to run project.
 
-1. Clone the repository and move to project folder. Make sure python is installed in your system. by running command *python --version*
+1. Clone the repository and move to project folder. Make sure python is installed in your system. by running command ```*python --version*```
 
-2. Install the requirements by running command *pip install -r requirements.txt*
+2. Install the requirements by running command ```*pip install -r requirements.txt*```
 
-3. Make migrations and migrate the changes by running command *python manage.py makemigrations* & *python manage.py migrate*
+3. Make migrations and migrate the changes by running command ```*python manage.py makemigrations*``` & ```*python manage.py migrate*```
 
-4. Create a admin user by running command *python manage.py createsuperuser* . Provide requested details.
+4. Create a admin user by running command ```*python manage.py createsuperuser*``` . Provide requested details.
 
-5. Now run the project by running command *python manage.py runserver*
+5. Now run the project by running command ```*python manage.py runserver*```
 
 
 # Steps to run/test the apis

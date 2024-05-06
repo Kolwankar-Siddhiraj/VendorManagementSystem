@@ -17,6 +17,8 @@ Vendor Management System
 3. Make migrations and migrate the changes by running command
    ```
    python manage.py makemigrations
+   ```
+   ```
    python manage.py migrate
    ```
 

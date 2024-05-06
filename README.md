@@ -110,7 +110,7 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
    - **Description:** Creates a new purchase order.
    - **Data:** JSON object with the following fields:
      - vendor (integer): ID of the vendor associated with the PO.
-     - delivery_date (string, format: YYYY-MM-DDTHH:MM:SS): Expected or actual delivery date of the order.
+     - delivery_date (string, format: DD-MM-YYYY): Expected or actual delivery date of the order.
      - items (array of objects): Details of items ordered.
      - quantity (integer): Total quantity of items in the PO.
 

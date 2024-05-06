@@ -65,14 +65,14 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
 
 # API documentation.
 
-0. **Admin Login => POST:** *```/api/admin/login/```*
+0. **Admin Login => ${\color{yellow}POST}$ :** *```/api/admin/login/```*
    - **Description:** This endpoint is for admin to login.
    - **Data:** JSON object with the following fields:
      - username (string): Admin's username.
      - password (string): Admin's password.
 
 
-1. **Create New Vendor => POST:** *```/api/vendors/```*
+1. **Create New Vendor => ${\color{yellow}POST}$ :** *```/api/vendors/```*
    - **Description:** This endpoint creates a new vendor profile.
    - **Data:** JSON object with the following fields:
      - vendor_code (string): A unique identifier for the vendor.
@@ -81,16 +81,16 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
      - address (string): Physical address of the vendor.
 
 
-2. **List All Vendors => GET:** *```/api/vendors/```*
+2. **List All Vendors => ${\color{green}GET}$ :** *```/api/vendors/```*
    - **Description:** Retrieves a list of all vendors.
 
 
-3. **Get Specific Vendor => GET:** *```/api/vendor/{vendor_id}/```*
+3. **Get Specific Vendor => ${\color{green}GET}$ :** *```/api/vendor/{vendor_id}/```*
    - **Description:** Retrieves details of a specific vendor.
    - **Data:** Path parameter {vendor_id} specifying the ID of the vendor.
 
 
-4. **Update Specific Vendor => PUT:** *```/api/vendor/{vendor_id}/```*
+4. **Update Specific Vendor => ${\color{lightblue}PUT}$ :** *```/api/vendor/{vendor_id}/```*
    - **Description:** Updates details of a specific vendor.
    - **Data:** Path parameter {vendor_id} specifying the ID of the vendor.
      JSON object with the fields to be updated:
@@ -99,12 +99,12 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
      - address (string): Physical address of the vendor.
 
 
-5. **Delete Specific Vendor => DELETE:** *```/api/vendor/{vendor_id}/```*
+5. **Delete Specific Vendor => ${\color{red}DELETE}$ :** *```/api/vendor/{vendor_id}/```*
    - **Description:** Deletes a specific vendor.
    - **Data:** Path parameter {vendor_id} specifying the ID of the vendor.
 
 
-6. **Create Purchase Order => POST:** *```/api/purchase_orders/```*
+6. **Create Purchase Order => ${\color{yellow}POST}$ :** *```/api/purchase_orders/```*
    - **Description:** Creates a new purchase order.
    - **Data:** JSON object with the following fields:
      - vendor (integer): ID of the vendor associated with the PO.
@@ -113,18 +113,18 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
      - quantity (integer): Total quantity of items in the PO.
 
 
-7. **List All Purchase Orders of Vendor => GET:** *```/api/purchase_orders/?vendor_id={vendor_id}```*
+7. **List All Purchase Orders of Vendor => ${\color{green}GET}$ :** *```/api/purchase_orders/?vendor_id={vendor_id}```*
    - **Description:** Retrieves a list of all purchase orders with an option to filter by vendor.
    - **Data:** Required query parameter:
      - vendor_id (integer): ID of the vendor to filter purchase orders.
 
 
-8. **Get Specific Purchase Order => GET:** *```/api/purchase_orders/{po_id}/```*
+8. **Get Specific Purchase Order => ${\color{green}GET}$ :** *```/api/purchase_orders/{po_id}/```*
    - **Description:** Retrieves details of a specific purchase order.
    - **Data:** Path parameter {po_id} specifying the ID of the purchase order.
 
 
-9. **Update Specific Purchase Order => PUT:** *```/api/purchase_orders/{po_id}/```*
+9. **Update Specific Purchase Order => ${\color{lightblue}PUT}$ :** *```/api/purchase_orders/{po_id}/```*
    - **Description:** Updates details of a specific purchase order.
    - **Data:** Path parameter {po_id} specifying the ID of the purchase order.
      JSON object with the fields to be updated:
@@ -132,17 +132,17 @@ Note : To run any api except Admin Login api we need auth token. To obtain auth 
      - quality_rating (float, optional): Rating given to the vendor for this PO.
 
 
-10. **Delete Specific Purchase Order => DELETE:** *```/api/purchase_orders/{po_id}/```*
+10. **Delete Specific Purchase Order => ${\color{red}DELETE}$ :** *```/api/purchase_orders/{po_id}/```*
     - **Description:** Deletes a specific purchase order.
     - **Data:** Path parameter {po_id} specifying the ID of the purchase order.
 
 
-11. **Get Performance Metrics of Vendor => GET:** *```/api/vendors/{vendor_id}/performance/```*
+11. **Get Performance Metrics of Vendor => ${\color{green}GET}$ :** *```/api/vendors/{vendor_id}/performance/```*
     - **Description:** Retrieves the calculated performance metrics for a specific vendor.
     - **Data:** Path parameter {vendor_id} specifying the ID of the vendor.
 
 
-12. **Acknowledge Purchase Order => POST:** *```/api/purchase_orders/{po_id}/acknowledge/```*
+12. **Acknowledge Purchase Order => ${\color{yellow}POST}$ :** *```/api/purchase_orders/{po_id}/acknowledge/```*
     - **Description:** Updates acknowledgment_date for a specific purchase order and triggers recalculation of average_response_time.
     - **Data:** Path parameter {po_id} specifying the ID of the purchase order.
 
